@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family:  Arial, sans-serif;
+    background-color: rgb(236, 220, 230);
+    color: rgb(22, 20, 20);
+    font-size: 16px;
+}
+/*En-tête*/
+header {
+    background-color: rgb(245, 236, 242);
+    padding: 20px 0;
+    border-bottom: 1px solid #e0ddd5;
+    z-index: 1000;
+    position: sticky; 
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+nav {
+    max-height: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-weight: bold;
+    color: rgb(21, 20, 20);
+    text-align: left;
+    font-size: 25px;
+}
+/* Menu desktop*/
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+.menu a{
+    text-decoration: none;
+    color: rgb(21, 20, 20);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  padding-bottom: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Bouton hamburger*/
+.hamburger {
+    display: none;
+    color: rgb(45, 43, 43);
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+ .hamburger {
+    display: block;
+ }
+ .menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 0;
+ }
+ .menu.active {
+    display: flex;
+ }
+ .menu li {
+    border-top: 1px solid #444;
+ }
+ .menu a {
+    display: block;
+    padding: 15px;
+ }
+ .nav {
+    flex-wrap: wrap;
+ }
+} 
+/*Accueil*/
+#accueil {
+    min-height: calc(100vh - 70px);
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.photo img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #5f5e5d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+} 
+@media (max-width: 768px) {
+    #accueil {
+        flex-direction: column;
+        gap: 30px; 
+        text-align: center;
+    }
+    .photo img {
+        width: 220px;
+        height: 220px;
+    }
+}
+/* Présentation*/
+.presentaion {
+    flex: 1;
+    margin-bottom: 0.8rem;
+    text-align: left;
+}
+.bonjour {
+    font-size: 15px;
+}
+.presentation h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.presentation h2 {
+    font-size: 16px;
+    color: rgb(21, 20, 20);
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+.special {
+    margin-bottom: 25px;
+    color: rgb(21, 20, 20);
+    text-align: justify;
+
+}
+.presentation-boutons {
+    display: flex;
+    gap: 15px;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+.btn {
+    background-color: rgb(30, 29, 29);
+    color: #e0ddd5;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 1px solid rgb(21, 20, 20);
+}
+/* A propos*/
+.listepuce{
+    margin-left: 20px;
+    list-style-type: disc;
+}
+.listepuce > li {
+    margin-bottom: 30px;
+}
+.competence {
+    padding: 40px 0 60px;
+}
+.listepuce{
+    margin-left: 20px;
+    list-style-type: disc;
+}
+.listepuce > li {
+    margin-bottom: 30px;
+}
+.competence {
+    background: rgb(236, 220, 230);
+    padding: 20px; 
+    font-size: 16px;
+}
+.compfond {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #5f5e5d;
+    color: white;
+}
+.integration {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+.qualbonn {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+}
+.tag {
+    background: gray;
+     padding: 6px 12px; 
+     border-radius: 4px;
+      font-size: 15px; 
+      border: 1px solid grey;
+      color:  #e0ddd5;
+}
+/* Projets*/
+.projet {
+    background: rgb(236, 220, 230);
+    padding: 20px; 
+    font-size: 16px;
+}
+.pr {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #5f5e5d;
+    color: white;
+}
+/* Contact */
+.contact {
+    background-color: transparent;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.contenu {
+    background-color: #ffffff;
+    max-width: 550px;
+    width: 100%;
+    padding: 40px;
+    box-shadow: none;
+    border: none;
+}
+.forme-contact {
+    font-size: 16px;
+    color: #2c2c2c;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+.formtableau {
+    display: flex;
+    gap: 20px;
+}
+.groupe-forme {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex: 1;
+}
+.groupe-forme label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555555;
+    margin-bottom: 8px;
+}
+.groupe-forme input {
+    background-color: #f5f0eb; 
+    border: none;
+    padding: 14px 16px;
+    font-size: 16px;
+    color: #333333;
+    outline: none;
+    font-family: inherit;
+}
+.groupe-forme textarea {
+    background-color: #f5f0eb; 
+    border: none;
+    padding: 14px 16px;
+    font-size: 16px;
+    color: #333333;
+    outline: none;
+    font-family: inherit;
+    resize: vertical;
+}
+.btn-envoyer {
+    width: 100%;
+    background-color: #8f9e8b; 
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 12px; 
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/*Pied de page*/
+
+footer {
+    width: 100%;
+    background-color: rgb(30, 29, 29);
+    padding: 40px 0;
+    color: white;
+}
+.piedpage{
+    max-width: 110px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.nom {
+    color: white;
+}
